@@ -14,12 +14,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://portfolio-rho-seven-86.vercel.app"),
   title: `${profile.name} — ${profile.role}`,
   description: profile.summary,
   openGraph: {
     title: `${profile.name} — ${profile.role}`,
     description: profile.tagline,
     type: "website",
+    url: "/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${profile.name} — ${profile.role}`,
+    description: profile.tagline,
   },
 };
 
