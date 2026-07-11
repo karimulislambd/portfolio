@@ -4,6 +4,8 @@ A modern, dark, minimal personal site for an AI/ML engineer. Built with **Next.j
 **React 19**, and **Tailwind CSS v4**. Features an **"Ask my AI"** chat widget (a Groq-backed
 assistant that answers questions about me) and one-tap **WhatsApp** contact.
 
+**Live site:** https://portfolio-rho-seven-86.vercel.app/
+
 ## Highlights
 
 - **Ask my AI** — a chat bubble where recruiters can ask about my projects, research, and
