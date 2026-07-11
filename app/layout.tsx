@@ -13,20 +13,24 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const metaDescription =
+  "AI/ML Engineer specializing in computer vision, explainable AI, and LLM systems — with four live AI apps and four research publications.";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://portfolio-rho-seven-86.vercel.app"),
+  metadataBase: new URL("https://karimul.vercel.app"),
   title: `${profile.name} — ${profile.role}`,
-  description: profile.summary,
+  description: metaDescription,
   openGraph: {
     title: `${profile.name} — ${profile.role}`,
-    description: profile.tagline,
+    description: metaDescription,
     type: "website",
     url: "/",
+    siteName: profile.name,
   },
   twitter: {
     card: "summary_large_image",
     title: `${profile.name} — ${profile.role}`,
-    description: profile.tagline,
+    description: metaDescription,
   },
 };
 
