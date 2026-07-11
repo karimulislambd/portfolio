@@ -10,6 +10,7 @@ export const profile = {
   github: "https://github.com/karimulislambd",
   linkedin: "https://linkedin.com/in/karimulislambd",
   availability: "Available part-time / remote now · Full-time from Aug 2026",
+  cv: "/Md_Karimul_Islam_CV.pdf",
   summary:
     "Final-year CSE student (CGPA 3.90/4.00) and first-author of four AI research works, " +
     "specializing in computer vision, explainable AI, and LLM systems. I ship end-to-end: " +

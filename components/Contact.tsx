@@ -23,6 +23,13 @@ export default function Contact() {
             Message on WhatsApp
           </a>
           <a
+            href={profile.cv}
+            download
+            className="rounded-full border border-border px-5 py-2.5 text-sm font-semibold transition-colors hover:border-accent hover:text-accent"
+          >
+            Download CV
+          </a>
+          <a
             href={`mailto:${profile.email}`}
             className="rounded-full border border-border px-5 py-2.5 text-sm font-semibold transition-colors hover:border-accent hover:text-accent"
           >
