@@ -1,12 +1,20 @@
+import Image from "next/image";
 import { profile } from "@/lib/data";
 
 export default function Hero() {
   return (
     <section id="top" className="hero-glow relative overflow-hidden">
       <div className="mx-auto flex max-w-5xl flex-col items-center px-5 pb-20 pt-36 text-center">
-        {/* Monogram avatar — swap for a photo later by replacing this block with an <img>. */}
-        <div className="mb-7 grid h-24 w-24 place-items-center rounded-2xl border border-border bg-surface text-3xl font-bold">
-          <span className="accent-gradient">MK</span>
+        {/* Headshot avatar with a gradient ring. */}
+        <div className="mb-7 rounded-full bg-gradient-to-br from-accent to-accent-2 p-[3px]">
+          <Image
+            src="/karimul.jpg"
+            alt={profile.name}
+            width={128}
+            height={128}
+            priority
+            className="h-28 w-28 rounded-full object-cover"
+          />
         </div>
 
         <span className="mb-4 rounded-full border border-border bg-surface/60 px-3 py-1 text-xs text-muted">
