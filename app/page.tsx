@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import Nav from "@/components/Nav";
 import Projects from "@/components/Projects";
 import Publications from "@/components/Publications";
+import Reveal from "@/components/Reveal";
 import Skills from "@/components/Skills";
 import WhatsAppFab from "@/components/WhatsAppFab";
 
@@ -15,11 +16,21 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <Projects />
-        <Publications />
-        <Skills />
-        <Experience />
-        <Contact />
+        <Reveal>
+          <Projects />
+        </Reveal>
+        <Reveal>
+          <Publications />
+        </Reveal>
+        <Reveal>
+          <Skills />
+        </Reveal>
+        <Reveal>
+          <Experience />
+        </Reveal>
+        <Reveal>
+          <Contact />
+        </Reveal>
       </main>
       <Footer />
       <WhatsAppFab />
