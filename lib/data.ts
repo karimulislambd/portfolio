@@ -93,7 +93,7 @@ export const publications: Publication[] = [
   {
     title: "LitePhospho — XAI CNN for Phosphorylation Prediction",
     venue: "Undergraduate Thesis · Ongoing",
-    role: "Sole Author",
+    role: "First Author",
     year: "2025–Present",
     highlight:
       "Lightweight 1D-CNN with Integrated Gradients explainability; ONNX export for low-resource deployment; homology-aware benchmarking.",
