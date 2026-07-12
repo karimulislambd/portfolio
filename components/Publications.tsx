@@ -23,6 +23,19 @@ export default function Publications() {
               {pub.role} · {pub.venue}
             </p>
             <p className="mt-2 text-sm leading-relaxed text-muted">{pub.highlight}</p>
+            {pub.link && (
+              <a
+                href={pub.link}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-accent hover:underline"
+              >
+                {pub.linkLabel ?? "View"}
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M7 17L17 7M17 7H8M17 7v9" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </a>
+            )}
           </article>
         ))}
       </div>
