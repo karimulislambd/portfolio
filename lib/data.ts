@@ -28,6 +28,15 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    name: "LitePhospho — Explainable Phosphosite Predictor",
+    blurb:
+      "The live demo of my first-author thesis model: paste a protein sequence to predict phosphorylation sites (S/T/Y), each explained by the residues that drove it. My trained model, served via ONNX.",
+    live: "https://litephospho-demo-karimulislambd.streamlit.app/",
+    code: "https://github.com/karimulislambd/litephospho-demo",
+    tags: ["Bioinformatics", "Explainable AI", "ONNX", "CNN", "Streamlit"],
+    accent: "#f472b6",
+  },
+  {
     name: "Agentic Research Assistant",
     blurb:
       "An LLM agent that answers questions across your research papers with page-level citations — then scores its own answers for faithfulness and relevance.",
@@ -71,6 +80,8 @@ export type Publication = {
   role: string;
   year: string;
   highlight: string;
+  link?: string;
+  linkLabel?: string;
 };
 
 export const publications: Publication[] = [
@@ -97,6 +108,8 @@ export const publications: Publication[] = [
     year: "2025–Present",
     highlight:
       "Lightweight 1D-CNN with Integrated Gradients explainability; ONNX export for low-resource deployment; homology-aware benchmarking.",
+    link: "https://doi.org/10.5281/zenodo.21290440",
+    linkLabel: "DOI: 10.5281/zenodo.21290440",
   },
   {
     title: "Enhanced MobileNetV1 for Autism Detection",
