@@ -100,8 +100,8 @@ export const publications: Publication[] = [
     year: "2025",
     highlight:
       "Hybrid DenseNet121/169; 91.22% accuracy, AUC 0.98, F1 92.56%; adversarial robustness tested against FGSM attacks.",
-    link: "https://doi.org/10.64296/vijir.v1i2.04",
-    linkLabel: "DOI: 10.64296/vijir.v1i2.04",
+    link: "https://doi.org/10.64296/vijir.v1i2.01",
+    linkLabel: "DOI: 10.64296/vijir.v1i2.01",
   },
   {
     title: "LitePhospho — XAI CNN for Phosphorylation Prediction",
