@@ -100,6 +100,8 @@ export const publications: Publication[] = [
     year: "2025",
     highlight:
       "Hybrid DenseNet121/169; 91.22% accuracy, AUC 0.98, F1 92.56%; adversarial robustness tested against FGSM attacks.",
+    link: "https://doi.org/10.64296/vijir.v1i2.04",
+    linkLabel: "DOI: 10.64296/vijir.v1i2.04",
   },
   {
     title: "LitePhospho — XAI CNN for Phosphorylation Prediction",
@@ -118,6 +120,8 @@ export const publications: Publication[] = [
     year: "2025",
     highlight:
       "Co-authored an early autism-detection model using an enhanced MobileNetV1 architecture.",
+    link: "https://doi.org/10.1109/QPAIN66474.2025.11172046",
+    linkLabel: "DOI: 10.1109/QPAIN66474.2025.11172046",
   },
 ];
 
