@@ -1,14 +1,31 @@
 @import "tailwindcss";
 
+/* ---------- Light (default) ---------- */
 :root {
-  --background: #0a0a0f;
-  --surface: #12121a;
-  --surface-2: #1a1a24;
-  --border: #262633;
-  --foreground: #e7e7ee;
-  --muted: #9a9aac;
-  --accent: #8b7cff;
-  --accent-2: #4dd0e1;
+  --background: #faf9f7;
+  --surface: #ffffff;
+  --surface-2: #f5f4f2;
+  --border: #e7e5e4;
+  --foreground: #1c1917;
+  --muted: #78716c;
+  --accent: #b45309;      /* amber-700 — reads well on light */
+  --accent-fg: #ffffff;
+  --accent-soft: rgba(180, 83, 9, 0.10);
+  --grid-line: rgba(28, 25, 23, 0.04);
+}
+
+/* ---------- Dark ---------- */
+:root[data-theme="dark"] {
+  --background: #0c0a09;
+  --surface: #1a1815;
+  --surface-2: #242019;
+  --border: #302b25;
+  --foreground: #f5f5f4;
+  --muted: #a8a29e;
+  --accent: #f59e0b;      /* amber-500 — pops on dark */
+  --accent-fg: #1c1917;
+  --accent-soft: rgba(245, 158, 11, 0.14);
+  --grid-line: rgba(245, 245, 244, 0.04);
 }
 
 @theme inline {
@@ -19,7 +36,7 @@
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-accent: var(--accent);
-  --color-accent-2: var(--accent-2);
+  --color-accent-fg: var(--accent-fg);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -34,23 +51,41 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+  /* faint blueprint grid — a subtle signature texture */
+  background-image:
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 28px 28px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Subtle radial glow behind the hero */
-.hero-glow {
-  background:
-    radial-gradient(60% 50% at 50% 0%, rgba(139, 124, 255, 0.14) 0%, transparent 70%),
-    radial-gradient(40% 40% at 80% 10%, rgba(77, 208, 225, 0.08) 0%, transparent 70%);
+/* ---------- Bento tile ---------- */
+.tile {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.tile-hover:hover {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
+  transform: translateY(-2px);
 }
 
-.accent-gradient {
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.accent-text {
+  color: var(--accent);
+}
+
+.eyebrow {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
 }
 
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: var(--background); }
 ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 5px; }
-::-webkit-scrollbar-thumb:hover { background: #33334a; }

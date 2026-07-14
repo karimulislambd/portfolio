@@ -3,7 +3,7 @@ import { publications } from "@/lib/data";
 
 export default function Publications() {
   return (
-    <Section id="publications" eyebrow="Research" title="Publications">
+    <Section id="publications" eyebrow="02 — Research" title="Publications">
       <p className="-mt-5 mb-8 max-w-2xl text-muted">
         First author on multiple peer-reviewed AI works in computer vision and explainable AI.
       </p>

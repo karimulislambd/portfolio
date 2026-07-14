@@ -3,57 +3,63 @@ import { profile } from "@/lib/data";
 
 export default function Hero() {
   return (
-    <section id="top" className="hero-glow relative overflow-hidden">
-      <div className="mx-auto flex max-w-5xl flex-col items-center px-5 pb-20 pt-36 text-center">
-        {/* Headshot avatar with a gradient ring. */}
-        <div className="mb-7 rounded-full bg-gradient-to-br from-accent to-accent-2 p-[3px]">
+    <section id="top" className="mx-auto max-w-5xl px-5 pb-8 pt-28">
+      {/* Bento grid: intro + photo + stats + availability */}
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:grid-rows-[auto_auto]">
+        {/* Intro tile */}
+        <div className="tile col-span-2 flex flex-col justify-between p-7 sm:col-span-3 sm:row-span-2">
+          <div>
+            <p className="eyebrow mb-4">Available · full-time from Aug 2026</p>
+            <h1 className="text-3xl font-bold leading-tight tracking-tight sm:text-5xl">
+              Md Karimul Islam
+            </h1>
+            <p className="mt-2 text-lg font-semibold sm:text-2xl">
+              <span className="accent-text">AI / ML Engineer</span>
+            </p>
+            <p className="mt-1 font-mono text-xs text-muted sm:text-sm">
+              Computer Vision · LLM · Explainable AI
+            </p>
+            <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted sm:text-base">
+              {profile.summary}
+            </p>
+          </div>
+          <div className="mt-6 flex flex-wrap gap-3">
+            <a href="#projects" className="rounded-xl bg-accent px-5 py-2.5 text-sm font-semibold text-accent-fg transition-transform hover:-translate-y-0.5">
+              View projects
+            </a>
+            <a href={profile.cv} download className="rounded-xl border border-border px-5 py-2.5 text-sm font-semibold transition-colors hover:border-accent hover:text-accent">
+              Download CV
+            </a>
+            <a href="#contact" className="rounded-xl border border-border px-5 py-2.5 text-sm font-semibold transition-colors hover:border-accent hover:text-accent">
+              Contact
+            </a>
+          </div>
+        </div>
+
+        {/* Photo tile */}
+        <div className="tile relative col-span-2 overflow-hidden sm:col-span-1 sm:row-span-2">
           <Image
             src="/karimul.jpg"
             alt={profile.name}
-            width={128}
-            height={128}
+            width={400}
+            height={400}
             priority
-            className="h-28 w-28 rounded-full object-cover"
+            className="h-full w-full object-cover"
           />
         </div>
 
-        <span className="mb-4 rounded-full border border-border bg-surface/60 px-3 py-1 text-xs text-muted">
-          {profile.availability}
-        </span>
-
-        <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight sm:text-6xl">
-          {profile.name}
-        </h1>
-        <p className="mt-3 text-lg font-medium sm:text-xl">
-          <span className="accent-gradient">{profile.role}</span>
-        </p>
-        <p className="mt-2 text-sm text-muted sm:text-base">{profile.tagline}</p>
-
-        <p className="mt-6 max-w-2xl text-balance text-muted">{profile.summary}</p>
-
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-          <a
-            href="#projects"
-            className="rounded-full bg-accent px-5 py-2.5 text-sm font-semibold text-background transition-transform hover:-translate-y-0.5"
-          >
-            View projects
-          </a>
-          <a
-            href={profile.cv}
-            download
-            className="inline-flex items-center gap-2 rounded-full border border-border px-5 py-2.5 text-sm font-semibold transition-colors hover:border-accent hover:text-accent"
-          >
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-            Download CV
-          </a>
-          <a
-            href="#contact"
-            className="rounded-full border border-border px-5 py-2.5 text-sm font-semibold transition-colors hover:border-accent hover:text-accent"
-          >
-            Get in touch
-          </a>
+        {/* Stat tiles */}
+        <div className="tile flex flex-col justify-center p-5">
+          <div className="text-3xl font-bold accent-text">5</div>
+          <div className="mt-1 text-xs text-muted">Live AI projects</div>
+        </div>
+        <div className="tile flex flex-col justify-center p-5">
+          <div className="text-3xl font-bold accent-text">4</div>
+          <div className="mt-1 text-xs text-muted">Publications</div>
+        </div>
+        <div className="tile col-span-2 flex flex-col justify-center p-5 sm:col-span-2">
+          <div className="text-3xl font-bold accent-text">3.90<span className="text-lg text-muted">/4.00</span></div>
+          <div className="mt-1 text-xs text-muted">CGPA · B.Sc. CSE, Varendra University</div>
         </div>
       </div>
     </section>
