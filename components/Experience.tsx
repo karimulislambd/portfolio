@@ -3,7 +3,7 @@ import { certifications, education, experience } from "@/lib/data";
 
 export default function Experience() {
   return (
-    <Section id="experience" eyebrow="Journey" title="Experience & Education">
+    <Section id="experience" eyebrow="04 — Journey" title="Experience & Education">
       <div className="relative space-y-6 border-l border-border pl-6">
         {experience.map((e) => (
           <div key={e.role + e.org} className="relative">
@@ -24,7 +24,7 @@ export default function Experience() {
         ))}
 
         <div className="relative">
-          <span className="absolute -left-[27px] top-1.5 h-2.5 w-2.5 rounded-full bg-accent-2" />
+          <span className="absolute -left-[27px] top-1.5 h-2.5 w-2.5 rounded-full bg-muted" />
           <div className="flex flex-wrap items-baseline justify-between gap-2">
             <h3 className="font-semibold">{education.degree}</h3>
             <span className="text-xs text-muted">{education.period}</span>

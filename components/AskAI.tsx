@@ -64,7 +64,7 @@ export default function AskAI() {
       <button
         onClick={() => setOpen((o) => !o)}
         aria-label="Ask my AI assistant"
-        className="fixed bottom-5 right-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-accent text-background shadow-lg shadow-black/30 transition-transform hover:scale-105"
+        className="fixed bottom-5 right-5 z-40 grid h-14 w-14 place-items-center rounded-full bg-accent text-accent-fg shadow-lg shadow-black/30 transition-transform hover:scale-105"
       >
         {open ? (
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2">
@@ -91,7 +91,7 @@ export default function AskAI() {
                 key={i}
                 className={`max-w-[85%] rounded-2xl px-3.5 py-2 text-sm leading-relaxed ${
                   m.role === "user"
-                    ? "ml-auto bg-accent text-background"
+                    ? "ml-auto bg-accent text-accent-fg"
                     : "bg-surface-2 text-foreground"
                 }`}
               >
@@ -134,7 +134,7 @@ export default function AskAI() {
             <button
               type="submit"
               disabled={loading || !input.trim()}
-              className="rounded-lg bg-accent px-3 py-2 text-sm font-semibold text-background disabled:opacity-40"
+              className="rounded-lg bg-accent px-3 py-2 text-sm font-semibold text-accent-fg disabled:opacity-40"
             >
               Send
             </button>
