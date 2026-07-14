@@ -38,7 +38,7 @@ function Card({ p, featured }: { p: (typeof projects)[number]; featured?: boolea
 export default function Projects() {
   return (
     <section id="projects" className="mx-auto max-w-5xl scroll-mt-20 px-5 py-14">
-      <p className="eyebrow mb-1">01 — What I've shipped</p>
+      <p className="eyebrow mb-1">What I've shipped</p>
       <h2 className="mb-2 text-2xl font-bold tracking-tight sm:text-3xl">Live Projects</h2>
       <p className="mb-8 max-w-2xl text-muted">
         Five deployed apps spanning research, text, vision, audio, and production ML — each with a

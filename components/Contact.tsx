@@ -7,7 +7,7 @@ const WA_LINK = `https://wa.me/${profile.whatsapp}?text=${encodeURIComponent(
 
 export default function Contact() {
   return (
-    <Section id="contact" eyebrow="05 — Let's talk" title="Get in touch">
+    <Section id="contact" eyebrow="Let's talk" title="Get in touch">
       <div className="rounded-2xl border border-border bg-surface p-8 text-center">
         <p className="mx-auto max-w-xl text-muted">
           Open to AI/ML engineering roles — {profile.availability.toLowerCase()}. The fastest way
