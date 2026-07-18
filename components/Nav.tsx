@@ -17,7 +17,7 @@ export default function Nav() {
 
   return (
     <header className="fixed top-0 inset-x-0 z-40 border-b border-border/70 bg-background/80 backdrop-blur-md">
-      <nav className="mx-auto flex max-w-5xl items-center justify-between px-5 py-3.5">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-5 py-3.5">
         <a href="#top" className="font-mono text-sm font-semibold tracking-tight" onClick={() => setOpen(false)}>
           <span className="accent-text">MK</span>
           <span className="text-muted">/islam</span>

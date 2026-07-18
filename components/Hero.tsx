@@ -3,7 +3,7 @@ import { profile } from "@/lib/data";
 
 export default function Hero() {
   return (
-    <section id="top" className="mx-auto max-w-5xl px-5 pb-8 pt-28">
+    <section id="top" className="mx-auto max-w-6xl px-5 pb-8 pt-28">
       {/* Bento grid: intro + photo + stats + availability */}
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 sm:grid-rows-[auto_auto]">
         {/* Intro tile */}
