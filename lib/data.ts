@@ -8,15 +8,16 @@ export const profile = {
   tagline: "AI / ML Engineer · Computer Vision · Explainable AI",
   location: "Rajshahi, Bangladesh",
   email: "karimulislam4855@gmail.com",
-  whatsapp: "8801701054855", // used for wa.me link (no + or spaces)
+  whatsapp: "8801701054855",
   github: "https://github.com/karimulislambd",
   linkedin: "https://linkedin.com/in/karimulislambd",
   availability: "Available Full-time",
   cv: "/Md_Karimul_Islam_CV.pdf",
   summary:
-    "CSE graduate (CGPA 3.90/4.00), first-author of three AI research works and co-author of a fourth, " +
-    "specializing in computer vision, explainable AI, and LLM systems. I ship end-to-end: " +
-    "from training and interpreting models to serving them as live, production-style apps.",
+    "CSE graduate (CGPA 3.90/4.00) with hands-on experience building backend services, APIs, " +
+    "and database-backed data pipelines — shipping five end-to-end systems with clean, maintainable code. " +
+    "Comfortable across the stack, from data engineering to production deployment, backed by three first-author " +
+    "AI research publications and one co-authored.",
 };
 
 export type Project = {
