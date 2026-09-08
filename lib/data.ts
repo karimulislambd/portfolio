@@ -1,4 +1,43 @@
-// Single source of truth for all portfolio content. Edit here to update the site.
+"use client";
+import { useState } from "react";
+import { getSkillsForVariant, profile } from "@/data"; // adjust import path
+
+export default function SkillsSection() {
+  const [variant, setVariant] = useState<"ai-ml" | "swe">("ai-ml");
+  const groups = getSkillsForVariant(variant);
+
+  return (
+    <section id="skills">
+      <div className="flex gap-2 mb-4">
+        <button
+          onClick={() => setVariant("ai-ml")}
+          className={variant === "ai-ml" ? "font-bold underline" : "opacity-60"}
+        >
+          AI / ML
+        </button>
+        <button
+          onClick={() => setVariant("swe")}
+          className={variant === "swe" ? "font-bold underline" : "opacity-60"}
+        >
+          Software Engineer
+        </button>
+      </div>
+
+      <div className="grid gap-4">
+        {groups.map((g) => (
+          <div key={g.group + variant}>
+            <h4>{g.group}</h4>
+            <ul className="flex flex-wrap gap-2">
+              {g.items.map((item) => <li key={item}>{item}</li>)}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}// Single source of truth for all portfolio content. Edit here to update the site.
+
+
 
 export const profile = {
   name: "Md Karimul Islam",
@@ -9,10 +48,10 @@ export const profile = {
   whatsapp: "8801701054855", // used for wa.me link (no + or spaces)
   github: "https://github.com/karimulislambd",
   linkedin: "https://linkedin.com/in/karimulislambd",
-  availability: "Available part-time / remote now · Full-time from Aug 2026",
+  availability: "Available Full-time",
   cv: "/Md_Karimul_Islam_CV.pdf",
   summary:
-    "Final-year CSE student (CGPA 3.90/4.00) and first-author of four AI research works, " +
+    "CSE graduate (CGPA 3.90/4.00), first-author of three AI research works and co-author of a fourth, " +
     "specializing in computer vision, explainable AI, and LLM systems. I ship end-to-end: " +
     "from training and interpreting models to serving them as live, production-style apps.",
 };
@@ -66,7 +105,7 @@ export const projects: Project[] = [
   {
     name: "Churn Prediction — MLOps",
     blurb:
-      "A model I train (scikit-learn) served the production way: FastAPI + validation, a customer form, Prometheus metrics, a live dashboard, Docker and CI.",
+      "A model I train (scikit-learn) served in a production way: FastAPI + validation, a customer form, Prometheus metrics, a live dashboard, Docker and CI.",
     live: "https://churn-prediction-service.onrender.com/app",
     code: "https://github.com/karimulislambd/churn-prediction-mlops",
     tags: ["MLOps", "FastAPI", "scikit-learn", "Docker", "CI/CD", "Monitoring"],
@@ -127,26 +166,22 @@ export const publications: Publication[] = [
   },
 ];
 
-// skills.ts
-export type SkillGroup = {
-  group: string;
-  items: string[];
-  variants: ("ai-ml" | "swe")[]; // which CV/page this group shows on
-};
+export type SkillGroup = { group: string; items: string[]; variants: ("ai-ml" | "swe")[] };
 
 export const skills: SkillGroup[] = [
-  { group: "Programming Languages", items: ["Python", "C++", "C", "SQL"], variants: ["ai-ml", "swe"] },
-  { group: "Databases", items: ["MySQL", "PostgreSQL", "SQLite"], variants: ["swe"] },
-  { group: "API Integration", items: ["REST API Design", "OpenRouter", "OpenAI", "FastAPI Services"], variants: ["swe"] },
-  { group: "Data Structures & Algorithms", items: ["Trees", "Graphs", "Priority Queues", "Dynamic Programming", "BFS/DFS"], variants: ["ai-ml", "swe"] },
-  { group: "Data Preprocessing", items: ["Homology-aware Clustering (MMseqs2)", "Sequence-window Modelling", "Data Augmentation", "Normalization"], variants: ["ai-ml", "swe"] },
   { group: "ML / DL", items: ["PyTorch", "TensorFlow", "Keras", "Scikit-Learn"], variants: ["ai-ml", "swe"] },
   { group: "Architectures", items: ["CNNs", "DenseNet", "ResNet", "MobileNet", "EfficientNet", "1D-CNN"], variants: ["ai-ml", "swe"] },
   { group: "CV / XAI", items: ["OpenCV", "MediaPipe", "Grad-CAM", "Integrated Gradients", "LIME", "ONNX"], variants: ["ai-ml", "swe"] },
   { group: "LLM / GenAI", items: ["Prompt Design", "Chain-of-Thought", "RAG", "AI Agents", "LLM Evaluation"], variants: ["ai-ml", "swe"] },
-  { group: "Tools / Serving", items: ["FastAPI", "Docker", "Linux", "Git", "Streamlit", "Tesseract OCR"], variants: ["ai-ml"] },
-  { group: "Tools / Serving", items: ["VS Code", "Git", "FastAPI", "Docker", "Linux", "Streamlit", "Tesseract OCR"], variants: ["swe"] },
+  { group: "Programming", items: ["Python", "C++", "C", "SQL"], variants: ["ai-ml", "swe"] },
+  { group: "Databases", items: ["MySQL", "PostgreSQL", "SQLite"], variants: ["swe"] },
+  { group: "API Integration", items: ["REST API Design", "OpenRouter", "OpenAI", "FastAPI Services"], variants: ["swe"] },
+  { group: "Tools / Serving", items: ["VS Code", "Git", "FastAPI", "Docker", "Linux", "Streamlit", "Tesseract OCR"], variants: ["ai-ml", "swe"] },
 ];
+
+export function getSkillsForVariant(variant: "ai-ml" | "swe") {
+  return skills.filter((s) => s.variants.includes(variant));
+}
 
 
 export type Experience = {
@@ -167,25 +202,22 @@ export const experience: Experience[] = [
     ],
   },
   {
-    role: "Project Lead",
-    org: "GeoChain — Rajshahi",
-    period: "Apr – Sep 2025",
-    points: [
-      "Built a blockchain-ready property marketplace with verification workflows; secured a 2nd UIHP grant (two-time grantee in 12 months).",
-      "Secured funding and completed structured entrepreneurship training through the UIHP Innovation Cohort (an ICT Division & World Bank-backed DEIED initiative).",
-
-    ],
+  role: "Project Lead",
+  org: "GeoChain — Rajshahi",
+  period: "Apr – Sep 2025",
+  points: [
+    "Built a blockchain-ready property marketplace with identity verification workflows, securing funding and completing structured entrepreneurship training through the ICT Division & World Bank-backed UIHP Innovation Cohort."
+  ],
   },
   {
-    role: "Project Lead",
-    org: "VetConnect — Rajshahi",
-    period: "Oct 2024 – Mar 2025",
-    points: [
-      "Launched Bangladesh's first digital veterinary platform; delivered GPS discovery, telemedicine, and an e-commerce prototype in 6 months (UIHP-funded).",
-      "Awarded a UIHP grant and completed structured innovation training as a first-time cohort participant.",
-    ],
-  },
-];
+  role: "Project Lead",
+  org: "VetConnect — Rajshahi",
+  period: "Oct 2024 – Mar 2025",
+  points: [
+    "Launched a digital veterinary platform prototype with GPS-based discovery, telemedicine, and e-commerce in 6 months, successfully securing a UIHP grant and completing structured innovation training."
+  ],
+  }
+  ];
 
 export const education = {
   degree: "B.Sc. in Computer Science & Engineering",
