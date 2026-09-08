@@ -127,26 +127,27 @@ export const publications: Publication[] = [
   },
 ];
 
-export const skills: { group: string; items: string[] }[] = [
-  { group: "ML / DL", items: ["PyTorch", "TensorFlow", "Keras", "Scikit-Learn"] },
-  {
-    group: "Architectures",
-    items: ["CNNs", "DenseNet", "ResNet", "MobileNet", "EfficientNet", "1D-CNN"],
-  },
-  {
-    group: "CV / XAI",
-    items: ["OpenCV", "MediaPipe", "Grad-CAM", "Integrated Gradients", "LIME", "ONNX"],
-  },
-  {
-    group: "LLM / GenAI",
-    items: ["Prompt Design", "Chain-of-Thought", "RAG", "AI Agents", "LLM Evaluation"],
-  },
-  { group: "Programming", items: ["Python", "C++", "C", "SQL"] },
-  {
-    group: "Tools / Serving",
-    items: ["FastAPI", "Docker", "Linux", "Git", "Streamlit", "Tesseract OCR"],
-  },
+// skills.ts
+export type SkillGroup = {
+  group: string;
+  items: string[];
+  variants: ("ai-ml" | "swe")[]; // which CV/page this group shows on
+};
+
+export const skills: SkillGroup[] = [
+  { group: "Programming Languages", items: ["Python", "C++", "C", "SQL"], variants: ["ai-ml", "swe"] },
+  { group: "Databases", items: ["MySQL", "PostgreSQL", "SQLite"], variants: ["swe"] },
+  { group: "API Integration", items: ["REST API Design", "OpenRouter", "OpenAI", "FastAPI Services"], variants: ["swe"] },
+  { group: "Data Structures & Algorithms", items: ["Trees", "Graphs", "Priority Queues", "Dynamic Programming", "BFS/DFS"], variants: ["ai-ml", "swe"] },
+  { group: "Data Preprocessing", items: ["Homology-aware Clustering (MMseqs2)", "Sequence-window Modelling", "Data Augmentation", "Normalization"], variants: ["ai-ml", "swe"] },
+  { group: "ML / DL", items: ["PyTorch", "TensorFlow", "Keras", "Scikit-Learn"], variants: ["ai-ml", "swe"] },
+  { group: "Architectures", items: ["CNNs", "DenseNet", "ResNet", "MobileNet", "EfficientNet", "1D-CNN"], variants: ["ai-ml", "swe"] },
+  { group: "CV / XAI", items: ["OpenCV", "MediaPipe", "Grad-CAM", "Integrated Gradients", "LIME", "ONNX"], variants: ["ai-ml", "swe"] },
+  { group: "LLM / GenAI", items: ["Prompt Design", "Chain-of-Thought", "RAG", "AI Agents", "LLM Evaluation"], variants: ["ai-ml", "swe"] },
+  { group: "Tools / Serving", items: ["FastAPI", "Docker", "Linux", "Git", "Streamlit", "Tesseract OCR"], variants: ["ai-ml"] },
+  { group: "Tools / Serving", items: ["VS Code", "Git", "FastAPI", "Docker", "Linux", "Streamlit", "Tesseract OCR"], variants: ["swe"] },
 ];
+
 
 export type Experience = {
   role: string;
@@ -190,7 +191,7 @@ export const education = {
   degree: "B.Sc. in Computer Science & Engineering",
   school: "Varendra University, Rajshahi",
   period: "Sep 2022 – Aug 2026",
-  details: "CGPA 3.90 / 4.00 · Merit Scholarship (2022–Present) · Hult Prize Campus Team Leader (2026)",
+  details: "CGPA 3.90 / 4.00 · Merit Scholarship (2022–2026) · Hult Prize Campus Team Leader (2026)",
 };
 
 export const certifications = [
