@@ -41,8 +41,8 @@ export default function SkillsSection() {
 
 export const profile = {
   name: "Md Karimul Islam",
-  role: "AI / ML Engineer",
-  tagline: "Computer Vision · LLM & Prompt Engineering · Explainable AI",
+  role: "Software Engineer",
+  tagline: "AI / ML Engineer · Computer Vision · Explainable AI",
   location: "Rajshahi, Bangladesh",
   email: "karimulislam4855@gmail.com",
   whatsapp: "8801701054855", // used for wa.me link (no + or spaces)
