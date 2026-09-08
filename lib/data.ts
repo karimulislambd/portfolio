@@ -1,41 +1,4 @@
-"use client";
-import { useState } from "react";
-import { getSkillsForVariant, profile } from "@/data"; // adjust import path
-
-export default function SkillsSection() {
-  const [variant, setVariant] = useState<"ai-ml" | "swe">("ai-ml");
-  const groups = getSkillsForVariant(variant);
-
-  return (
-    <section id="skills">
-      <div className="flex gap-2 mb-4">
-        <button
-          onClick={() => setVariant("ai-ml")}
-          className={variant === "ai-ml" ? "font-bold underline" : "opacity-60"}
-        >
-          AI / ML
-        </button>
-        <button
-          onClick={() => setVariant("swe")}
-          className={variant === "swe" ? "font-bold underline" : "opacity-60"}
-        >
-          Software Engineer
-        </button>
-      </div>
-
-      <div className="grid gap-4">
-        {groups.map((g) => (
-          <div key={g.group + variant}>
-            <h4>{g.group}</h4>
-            <ul className="flex flex-wrap gap-2">
-              {g.items.map((item) => <li key={item}>{item}</li>)}
-            </ul>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}// Single source of truth for all portfolio content. Edit here to update the site.
+// Single source of truth for all portfolio content. Edit here to update the site.
 
 
 
@@ -166,22 +129,36 @@ export const publications: Publication[] = [
   },
 ];
 
-export type SkillGroup = { group: string; items: string[]; variants: ("ai-ml" | "swe")[] };
-
-export const skills: SkillGroup[] = [
-  { group: "ML / DL", items: ["PyTorch", "TensorFlow", "Keras", "Scikit-Learn"], variants: ["ai-ml", "swe"] },
-  { group: "Architectures", items: ["CNNs", "DenseNet", "ResNet", "MobileNet", "EfficientNet", "1D-CNN"], variants: ["ai-ml", "swe"] },
-  { group: "CV / XAI", items: ["OpenCV", "MediaPipe", "Grad-CAM", "Integrated Gradients", "LIME", "ONNX"], variants: ["ai-ml", "swe"] },
-  { group: "LLM / GenAI", items: ["Prompt Design", "Chain-of-Thought", "RAG", "AI Agents", "LLM Evaluation"], variants: ["ai-ml", "swe"] },
-  { group: "Programming", items: ["Python", "C++", "C", "SQL"], variants: ["ai-ml", "swe"] },
-  { group: "Databases", items: ["MySQL", "PostgreSQL", "SQLite"], variants: ["swe"] },
-  { group: "API Integration", items: ["REST API Design", "OpenRouter", "OpenAI", "FastAPI Services"], variants: ["swe"] },
-  { group: "Tools / Serving", items: ["VS Code", "Git", "FastAPI", "Docker", "Linux", "Streamlit", "Tesseract OCR"], variants: ["ai-ml", "swe"] },
+export const skills: { group: string; items: string[] }[] = [
+  { group: "Programming Languages", items: ["Python", "C++", "C", "SQL"] },
+  { group: "Databases", items: ["MySQL", "PostgreSQL", "SQLite"] },
+  { group: "API Integration", items: ["REST API Design", "OpenRouter", "OpenAI", "FastAPI Services"] },
+  {
+    group: "Data Structures & Algorithms",
+    items: ["Trees", "Graphs", "Priority Queues", "Dynamic Programming", "BFS/DFS"],
+  },
+  {
+    group: "Data Preprocessing",
+    items: ["Homology-aware Clustering (MMseqs2)", "Sequence-window Modelling", "Data Augmentation", "Normalization"],
+  },
+  { group: "ML / DL", items: ["PyTorch", "TensorFlow", "Keras", "Scikit-Learn"] },
+  {
+    group: "Architectures",
+    items: ["CNNs", "DenseNet", "ResNet", "MobileNet", "EfficientNet", "1D-CNN"],
+  },
+  {
+    group: "CV / XAI",
+    items: ["OpenCV", "MediaPipe", "Grad-CAM", "Integrated Gradients", "LIME", "ONNX"],
+  },
+  {
+    group: "LLM / GenAI",
+    items: ["Prompt Design", "Chain-of-Thought", "RAG", "AI Agents", "LLM Evaluation"],
+  },
+  {
+    group: "Tools / Serving",
+    items: ["VS Code", "Git", "FastAPI", "Docker", "Linux", "Streamlit", "Tesseract OCR"],
+  },
 ];
-
-export function getSkillsForVariant(variant: "ai-ml" | "swe") {
-  return skills.filter((s) => s.variants.includes(variant));
-}
 
 
 export type Experience = {
