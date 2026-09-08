@@ -9,15 +9,15 @@ export default function Hero() {
         {/* Intro tile */}
         <div className="tile col-span-2 flex flex-col justify-between p-7 sm:col-span-3 sm:row-span-2">
           <div>
-            <p className="eyebrow mb-4">Available · full-time from Aug 2026</p>
+            <p className="eyebrow mb-4">Available · full-time</p>
             <h1 className="text-3xl font-bold leading-tight tracking-tight sm:text-5xl">
               Md Karimul Islam
             </h1>
             <p className="mt-2 text-lg font-semibold sm:text-2xl">
-              <span className="accent-text">AI / ML Engineer</span>
+              <span className="accent-text">Software Engineer</span>
             </p>
             <p className="mt-1 font-mono text-xs text-muted sm:text-sm">
-              Computer Vision · LLM · Explainable AI
+              AI / ML Engineer · Computer Vision · Explainable AI
             </p>
             <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted sm:text-base">
               {profile.summary}
