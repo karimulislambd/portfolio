@@ -92,6 +92,8 @@ export const publications: Publication[] = [
     year: "2026",
     highlight:
       "MobileNetV3 + EfficientNetB0 fusion; 97.71% accuracy across 12 categories with Grad-CAM interpretability — outperformed ResNet50V2, EfficientNetV2, ConvNeXt-Tiny.",
+    link: "https://doi.org/10.1109/PECCII70991.2026.11662088",
+    linkLabel: "DOI: 10.1109/PECCII70991.2026.11662088",
   },
   {
     title: "FusionNet — Deepfake Detection Framework",
@@ -164,19 +166,22 @@ export const experience: Experience[] = [
     ],
   },
   {
-    role: "Founder & CEO",
+    role: "Project Lead",
     org: "GeoChain — Rajshahi",
     period: "Apr – Sep 2025",
     points: [
       "Built a blockchain-ready property marketplace with verification workflows; secured a 2nd UIHP grant (two-time grantee in 12 months).",
+      "Secured funding and completed structured entrepreneurship training through the UIHP Innovation Cohort (an ICT Division & World Bank-backed DEIED initiative).",
+
     ],
   },
   {
-    role: "Founder & CEO",
+    role: "Project Lead",
     org: "VetConnect — Rajshahi",
     period: "Oct 2024 – Mar 2025",
     points: [
       "Launched Bangladesh's first digital veterinary platform; delivered GPS discovery, telemedicine, and an e-commerce prototype in 6 months (UIHP-funded).",
+      "Awarded a UIHP grant and completed structured innovation training as a first-time cohort participant.",
     ],
   },
 ];
