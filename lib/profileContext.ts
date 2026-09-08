@@ -43,11 +43,11 @@ interpreting models, then serving them as live production-style apps.
 
 # EXPERIENCE
 - Prompt Engineering Intern at Oleyn PTE Ltd (Oleyn.ai), remote, Jan–Apr 2026:
-  built structured prompts for production LLM pipelines; benchmarked outputs;
+  Built structured prompts for production LLM pipelines; benchmarked outputs;
   Future Leaders Program Batch 1.
-- Founder & CEO of GeoChain (2025): blockchain-ready property marketplace,
+- Innovative Idea 2- GeoChain (2025): blockchain-ready property marketplace,
   two-time UIHP grant recipient.
-- Founder & CEO of VetConnect (2024–2025): Bangladesh's first digital veterinary
+- Innovative Idea 1- VetConnect (2024–2025): Bangladesh's first digital veterinary
   platform with GPS discovery, telemedicine, and e-commerce.
 
 # SKILLS
