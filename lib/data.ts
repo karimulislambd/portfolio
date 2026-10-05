@@ -54,7 +54,7 @@ export const projects: Project[] = [
       "Upload any image to ask questions about it or get a one-click structured JSON analysis — powered by a vision-language model.",
     live: "https://multimodal-visual-analyst-karimulislambd.streamlit.app/",
     code: "https://github.com/karimulislambd/multimodal-visual-analyst",
-    tags: ["Multimodal", "VLM", "Llama 4 Scout", "Structured Extraction"],
+    tags: ["Multimodal", "VLM", "Qwen 3.8", "Structured Extraction"],
     accent: "#4dd0e1",
   },
   {

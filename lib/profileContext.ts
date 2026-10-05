@@ -25,7 +25,7 @@ interpreting models, then serving them as live production-style apps.
    research papers with page-level citations and scores its own answers for
    faithfulness and relevance. Tech: RAG, AI agents, FAISS, ONNX embeddings, Groq.
 2. Multimodal Visual Analyst — upload an image to ask questions or get a
-   structured JSON analysis, using a vision-language model (Llama 4 Scout).
+   structured JSON analysis, using a vision-language model (Qwen 3.8).
 3. Audio Intelligence — turns meeting/lecture audio into a transcript, a
    structured report (summary, action items), and a Q&A chat. Tech: Whisper + LLM.
 4. Churn Prediction (MLOps) — a scikit-learn model he trains, served via FastAPI
