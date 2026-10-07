@@ -15,7 +15,7 @@ export const profile = {
   cv: "/Md_Karimul_Islam_CV.pdf",
   summary:
     "CSE graduate (CGPA 3.90/4.00) with hands-on experience building backend services, APIs, " +
-    "and database-backed data pipelines — shipping five end-to-end systems with clean, maintainable code. " +
+    "and database-backed data pipelines — shipping six end-to-end systems with clean, maintainable code. " +
     "Comfortable across the stack, from data engineering to production deployment, backed by three first-author " +
     "AI research publications and one co-authored.",
 };
@@ -38,6 +38,15 @@ export const projects: Project[] = [
     code: "https://github.com/karimulislambd/litephospho-demo",
     tags: ["Bioinformatics", "Explainable AI", "ONNX", "CNN", "Streamlit"],
     accent: "#f472b6",
+  },
+  {
+    name: "AI Job Tracker — Full-Stack SaaS",
+    blurb:
+      "Track job applications on a Kanban board and let AI score your CV against each role. FastAPI + PostgreSQL backend with JWT auth, migrations, a Postgres job queue and 128 integration tests; Next.js frontend. One-click demo account.",
+    live: "https://karimul-job-tracker.vercel.app",
+    code: "https://github.com/karimulislambd/ai-job-tracker",
+    tags: ["FastAPI", "PostgreSQL", "Next.js", "JWT Auth", "Job Queue", "LLM"],
+    accent: "#60a5fa",
   },
   {
     name: "Agentic Research Assistant",

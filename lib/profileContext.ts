@@ -34,6 +34,11 @@ interpreting models, then serving them as live production-style apps.
 5. LitePhospho Demo — paste a protein sequence to get phosphorylation predictions
    for every S/T/Y site from his own thesis model (served with ONNX Runtime on
    CPU), plus a per-site explanation of which residues drove each prediction.
+6. AI Job Tracker — a full-stack SaaS app: a Kanban board of job applications,
+   CV uploads, a dashboard computed in SQL, and an AI match analysis that scores
+   a CV against a job description. Backend: FastAPI, PostgreSQL with Alembic
+   migrations, JWT auth with rotating refresh tokens, a Postgres-backed job queue,
+   128 integration tests. Frontend: Next.js. Live with a one-click demo account.
 
 # RESEARCH (4 works, mostly first author)
 - MEFNet (IEEE PECCII 2026, first author): hybrid MobileNetV3 + EfficientNetB0
