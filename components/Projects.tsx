@@ -41,7 +41,7 @@ export default function Projects() {
       <p className="eyebrow mb-1">What I've shipped</p>
       <h2 className="mb-2 text-2xl font-bold tracking-tight sm:text-3xl">Live Projects</h2>
       <p className="mb-8 max-w-2xl text-muted">
-        Five deployed apps spanning research, text, vision, audio, and production ML — each with a
+        Six deployed apps spanning research, full-stack backend, text, vision, audio, and production ML — each with a
         live demo and open-source code.
       </p>
 
