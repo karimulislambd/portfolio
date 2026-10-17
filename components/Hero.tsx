@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { profile } from "@/lib/data";
+import { profile, projects, publications } from "@/lib/data";
 
 export default function Hero() {
   return (
@@ -50,11 +50,11 @@ export default function Hero() {
 
         {/* Stat tiles */}
         <div className="tile flex flex-col justify-center p-5">
-          <div className="text-3xl font-bold accent-text">5</div>
-          <div className="mt-1 text-xs text-muted">Live AI projects</div>
+          <div className="text-3xl font-bold accent-text">{projects.length}</div>
+          <div className="mt-1 text-xs text-muted">Live projects</div>
         </div>
         <div className="tile flex flex-col justify-center p-5">
-          <div className="text-3xl font-bold accent-text">4</div>
+          <div className="text-3xl font-bold accent-text">{publications.length}</div>
           <div className="mt-1 text-xs text-muted">Publications</div>
         </div>
         <div className="tile col-span-2 flex flex-col justify-center p-5 sm:col-span-2">
