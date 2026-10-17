@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 const metaDescription =
-  "AI/ML Engineer specializing in computer vision, explainable AI, and LLM systems — with four live AI apps and four research publications.";
+  "Software Engineer (AI/ML) specializing in computer vision, explainable AI, and LLM systems — with seven live projects, including the Study Abroad Finder platform, and four research publications.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://karimul.vercel.app"),
