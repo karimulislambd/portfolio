@@ -27,9 +27,13 @@ function Card({ p, featured }: { p: (typeof projects)[number]; featured?: boolea
         <a href={p.live} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 accent-text hover:underline">
           Live demo <ArrowIcon />
         </a>
-        <a href={p.code} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-muted hover:text-foreground">
-          Code <ArrowIcon />
-        </a>
+        {p.code ? (
+          <a href={p.code} target="_blank" rel="noreferrer" className="inline-flex items-center gap-1 text-muted hover:text-foreground">
+            Code <ArrowIcon />
+          </a>
+        ) : (
+          <span className="text-muted">Private repository</span>
+        )}
       </div>
     </article>
   );
@@ -41,8 +45,8 @@ export default function Projects() {
       <p className="eyebrow mb-1">What I've shipped</p>
       <h2 className="mb-2 text-2xl font-bold tracking-tight sm:text-3xl">Live Projects</h2>
       <p className="mb-8 max-w-2xl text-muted">
-        Six deployed apps spanning research, full-stack backend, text, vision, audio, and production ML — each with a
-        live demo and open-source code.
+        Seven deployed apps spanning a full product platform, research, full-stack backend, text, vision, audio, and
+        production ML — each with a live demo, and open-source code for all but the flagship.
       </p>
 
       <div className="grid gap-4 sm:grid-cols-2">

@@ -15,7 +15,7 @@ export const profile = {
   cv: "/Md_Karimul_Islam_CV.pdf",
   summary:
     "CSE graduate (CGPA 3.90/4.00) with hands-on experience building backend services, APIs, " +
-    "and database-backed data pipelines — shipping six end-to-end systems with clean, maintainable code. " +
+    "and database-backed data pipelines — shipping seven end-to-end systems with clean, maintainable code. " +
     "Comfortable across the stack, from data engineering to production deployment, backed by three first-author " +
     "AI research publications and one co-authored.",
 };
@@ -24,12 +24,21 @@ export type Project = {
   name: string;
   blurb: string;
   live: string;
-  code: string;
+  /** Repository link; left out for a private repository. */
+  code?: string;
   tags: string[];
   accent: string; // small color hint per card
 };
 
 export const projects: Project[] = [
+  {
+    name: "Study Abroad Finder — Programme Finder & Consultancy Platform",
+    blurb:
+      "A platform I built and run end to end: 82,000+ master's programmes at 30,000+ universities, imported from 51 official national registers and refreshed by scheduled jobs. A nightly AI pipeline reads university pages and publishes admission requirements only when a quote from the official page backs them. Consultancies get a multi-tenant workspace: Google sign-in, saved candidates, partner universities and instant Strong / Possible / Reach reports with PDF export.",
+    live: "https://studyabroadproject.vercel.app",
+    tags: ["Next.js", "TypeScript", "PostgreSQL", "LLM Pipeline", "Multi-tenant SaaS", "GitHub Actions", "474 tests"],
+    accent: "#34d399",
+  },
   {
     name: "LitePhospho — Explainable Phosphosite Predictor",
     blurb:

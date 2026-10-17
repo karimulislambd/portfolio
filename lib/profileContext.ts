@@ -21,6 +21,17 @@ prompt engineering, LLM evaluation). He ships end-to-end: training and
 interpreting models, then serving them as live production-style apps.
 
 # LIVE PROJECTS
+0. Study Abroad Finder (flagship, studyabroadproject.vercel.app) — a study-abroad
+   platform he built and runs end to end. It lists 82,000+ master's programmes at
+   30,000+ universities, imported from 51 official national registers by scheduled
+   jobs, and a nightly AI pipeline reads official university pages and publishes
+   admission requirements (English tests, grades, fees, deadlines) only when a quote
+   from the page backs each value, with a free multi-provider LLM fallback chain.
+   Consultancies get a multi-tenant workspace: Google sign-in, saved candidates,
+   partner universities, instant Strong/Possible/Reach match reports with reasons,
+   and PDF export. Tech: Next.js, TypeScript, PostgreSQL (Neon) with Drizzle,
+   GitHub Actions for imports, backups and monitoring, 474 automated tests. The
+   repository is private.
 1. Agentic Research Assistant — an LLM agent that answers questions across
    research papers with page-level citations and scores its own answers for
    faithfulness and relevance. Tech: RAG, AI agents, FAISS, ONNX embeddings, Groq.
